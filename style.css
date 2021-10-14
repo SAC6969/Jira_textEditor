@@ -1,0 +1,206 @@
+/* Universal selector "*" */
+*{
+    box-sizing: border-box;
+}
+body {
+    /* border: 2px solid red; */
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+.header-container {
+    /* border: 2px solid black; */
+    height: 5.2rem;
+    background-color: #333;
+    display: flex;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    padding-left: 3rem;
+}
+
+.header-container>* {
+    background-color: #454444;
+    height: 65%;
+    border-radius: 6px;
+}
+
+
+/* *********** color group ************ */
+
+.color-group_conatiner {
+    /* %  relative unit which derived from the parent  */
+    width: 40%;
+    margin-right: 3rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.color {
+    height: 50%;
+    width: 12%;
+    border-radius: 4px;
+}
+
+.pink {
+    background-color: lightpink;
+}
+
+.blue {
+    background-color: lightblue;
+}
+
+.green {
+    background-color: lightgreen;
+}
+
+.black {
+    background-color: black;
+}
+
+
+/* ********** Add And delete Container******** */
+
+.add-cross_container,.lock-unlock_container {
+    width: 20%;
+    margin-right: 1rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.add-cross_container>* {
+    width: 50%;
+    height: 100%;
+}
+
+.lock-unlock_container>* {
+    width: 50%;
+    height: 100%;
+}
+
+.plus-container,.multiply-container,.lock-container,.unlock-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-plus,.fa-times,.fa-lock-open,.fa-lock{
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.active{
+    background-color: rgb(62, 56, 56);
+}
+
+.task_input {
+    color: white;
+}
+
+
+/* ************** Main Container ***************** */
+
+.main-container {
+    /* border: 2px solid green; */
+    /* vh,vw */
+    /* 100% width of visible screen -> vw */
+    /* 100% height of visible screen -> vh */
+    height: calc(100vh - 3.5rem);
+    background-color: #f2f2f2;
+    padding: 4rem;
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items:center; */
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    overflow-y: scroll;
+}
+
+.task_container {
+    /* border: 1px solid black; */
+    background-color: white;
+    height: 8rem;
+    width: 13rem;
+}
+
+.task_main-container {
+    padding: 0.5rem;
+    height: 6.5rem;
+}
+
+.task_header {
+    height: 0.5rem;
+    /* background-color: black; */
+}
+
+.task_id {
+    color: rgb(150, 144, 144);
+    margin: 0.2rem;
+    margin-left: 0rem;
+}
+
+.text{
+    font-weight: 600;
+    height: 80%;
+    overflow-y: scroll;
+}
+
+.text::-webkit-scrollbar {
+    display: none;
+}
+
+/* ********** MOdal ********** */
+.modal{
+    height: 20rem;
+    width: 35rem;
+    display: flex;
+    background-color: white;
+    position: fixed;
+    top: calc(50%-10rem);
+    left: calc(50% - (35/2)rem);
+}
+
+.input_container{
+    width: 65%;
+    height: 100%;
+    /* border: 1px solid black; */
+    padding:2rem;
+}
+
+.input_container_text{
+    outline: none;
+    height: 100%;
+    width: 100%;
+    /* font-weight: lighter; */
+    border: none;
+    font-size: 1.5rem;
+}
+
+.color_container{
+    background-color: rgb(46, 43, 43);
+    height: 100%;
+    width: 35%;
+}
+
+.color_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.color_picker{
+    height: 3rem;
+    width: 6rem;
+}
+
+.selected{
+    border: 0.2rem solid white;
+}
+
+@media only screen and (max-width: 550px) {
+    html {
+      font-size: 10px;
+    }
+  }
